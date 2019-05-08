@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["react", "prettier", "react-hooks"],
+  "globals": {
+    "graphql": false
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "prettier/prettier": ["error", {
+      "endOfLine": "auto"
+    }]
+  }
+}

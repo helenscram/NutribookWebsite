@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(240, 102, 118);
+}
+
+a:hover {
+  color: rgb(247, 173, 59);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(236, 60, 82);
+}
+
+/* pictures and images must be defined as display: block;
+  Otherwise they are considered to be fonts and show font descenders
+  below the baseline.
+  https: //stackoverflow.com/questions/31444891/mystery-white-space-underneath-image-tag/31445364#31445364
+  */
+img {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  width: 100%;
+  margin: 0;
+}
+
+picture {
+  background: transparent;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
