@@ -1,16 +1,20 @@
 import React from "react"
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Section from "../components/Section"
 import Figure from "../components/Figure"
-import { H1, H3, P } from "../components/VerticalRhythm"
+import { H1, H2, H3, P } from "../components/VerticalRhythm"
 import img01_4x1 from "../images/blog/4x1/berries-bowl.jpg"
 import img01_21x9 from "../images/blog/21x9/berries-bowl.jpg"
 import img01_16x9 from "../images/blog/16x9/berries-bowl.jpg"
 import img01_3x2 from "../images/blog/3x2/berries-bowl.jpg"
 import img01_4x3 from "../images/blog/4x3/berries-bowl.jpg"
+import fork1_4x1 from "../images/blog/4x1/fork1.jpg"
+import fork2_4x1 from "../images/blog/4x1/fork2.jpg"
+import fork3_4x1 from "../images/blog/4x1/fork3.jpg"
 import breakpoints from "../theme/breakpoints"
 
 const IndexPage = () => (
@@ -27,7 +31,13 @@ const IndexPage = () => (
     </Figure>
     <Section>
       <H1>Welcome to Nutribook!</H1>
-      <H3>Browse Recipes of the community</H3>
+      <H2>Nutribook helps you to create your own recipe collection</H2>
+      <Figure>
+        <picture>
+          <source srcSet={fork1_4x1} media={`(min-width: ${breakpoints.sm})`} />
+          <img src={fork1_4x1} alt="Berries" />
+        </picture>
+      </Figure>
       <P>
         Every lifestyle cook knows the problem: you love cooking, you love
         improvising, and you love collecting recipes. Besides having 10 cook
@@ -39,27 +49,45 @@ const IndexPage = () => (
         their nutrients so that you will always be able to track your favorite
         recipes properly.
       </P>
-      <H3>Create your own</H3>
+    </Section>
+    <Section>
+      <H3>Browse recipes</H3>
+      <Figure>
+        <picture>
+          <source srcSet={fork2_4x1} media={`(min-width: ${breakpoints.sm})`} />
+          <img src={fork2_4x1} alt="Berries" />
+        </picture>
+      </Figure>
       <P>
-        Look at these words. Are they small words? And he referred to my words -
-        if they're small, something else must be small. I guarantee you there's
-        no problem, I guarantee. We have so many things that we have to do
-        better... and certainly ipsum is one of them. All of the words in Lorem
-        Ipsum have flirted with me - consciously or unconsciously. That's to be
-        expected. I don't think anybody knows it was Russia that wrote Lorem
-        Ipsum, but I don't know, maybe it was. It could be Russia, but it could
-        also be China. It could also be lots of other people. It also could be
-        some wordsmith sitting on their bed that weights 400 pounds. Ok? Lorem
-        Ipsum is unattractive, both inside and out. I fully understand why it’s
-        former users left it for something else. They made a good decision. Be
-        careful, or I will spill the beans on your placeholder text.
+        Everyone on Nutribook is part of our community. The community has grown
+        and therefore we have a variety of recipes available for you! The
+        recipes are diverse as each and everyone has their own preferences,
+        taste, and diet. YOu can benefit from this variety and can contribute
+        yourself. Often it is easier to get inspired first, so why not browse
+        through others' creations? Come on and find out what our community has
+        created!
       </P>
-      <p>
-        <a href="http://gatsbyjs.org/" target="_blank" rel="nofollow noopener">
-          Create own Nutribook
-        </a>
-      </p>
-      <button onclick="window.location='blog.js'">Visit Page Now</button>
+      <button>
+        <Link to="/community"> Browse Recipes</Link>
+      </button>
+      <H3>Create your own meals</H3>
+      <Figure>
+        <picture>
+          <source srcSet={fork3_4x1} media={`(min-width: ${breakpoints.sm})`} />
+          <img src={fork3_4x1} alt="Berries" />
+        </picture>
+      </Figure>
+      <P>
+        It's nice to get inspired by others, but why not inspire OTHERS? with
+        Nutribook you are able to create and document your own recipes. You have
+        a certain diet? Great, share your experience, knowledge and expertise
+        with others. Just add relevant information to your recipe, e.g. macros
+        and calories. This way it will be easier for others to follow your diet
+        as well or adapt it to theirs.
+      </P>
+      <button>
+        <Link to="/nutribook"> Create own Nutribook</Link>
+      </button>
     </Section>
   </Layout>
 )

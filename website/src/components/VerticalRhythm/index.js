@@ -48,6 +48,7 @@ export const H5 = styled.h5`
 export const P = styled.p`
   margin-top: 0rem;
   margin-bottom: 1.2777778rem;
+  text-align: justify;
 `
 
 export const Ul = styled.ul`

@@ -5,8 +5,7 @@ import CookieConsent from "react-cookie-consent"
 import "./styled/layout.css"
 import { ThemeProvider } from "styled-components"
 import { Flex } from "rebass"
-import "typeface-montserrat"
-import "typeface-dosis"
+import "typeface-Nunito"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -55,35 +54,28 @@ const Layout = ({ children }) => {
           <Logo to="/" text="Nutribook" img={imgLogo} />
           <Menu>
             <MenuItem to="/">Home</MenuItem>
-            <MenuItem to="/resources/">My Foodbook</MenuItem>
+            <MenuItem to="/nutribook/">My Nutribook</MenuItem>
             <MenuItem to="/blog/">Blog</MenuItem>
-
-            <MenuItem to="/about/">Community</MenuItem>
+            <MenuItem to="/community/">Community</MenuItem>
           </Menu>
         </Header>
         <Main>{children}</Main>
         <Footer>
-          <div>© Dr. Ulrich Anders</div>
-          <Flex width={"3rem"} justifyContent="space-between">
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noopener nofollow"
-            >
-              <FontAwesomeIcon icon={["fab", "twitter-square"]} />
-            </a>
-            <a
-              href="https://facebook.com/"
-              target="_blank"
-              rel="noopener nofollow"
-            >
-              <FontAwesomeIcon icon={["fab", "facebook-square"]} />
-            </a>
+          <Flex flexDirection="column">
+            <span>© Helen Cramer</span>
+            <span> Version: {site.siteMetadata.version}</span>
           </Flex>
           <Flex flexDirection="column">
-            <span>Version: {site.siteMetadata.version}</span>
-            <Link to="/imprint/">Imprint</Link>
+            <span>Roadmap</span>
+            <Link to="/">Home</Link>
+            <Link to="/nutribook">My Nutribook</Link>
+            <Link to="/blog/">Blog</Link>
+            <Link to="/community">Community</Link>
+            <Link to="/imprint/">Impressum</Link>
             <Link to="/data-protection/">Data Protection</Link>
+          </Flex>
+          <Flex width={"3rem"} justifyContent="space-between">
+            <span>Email: helen.cramer@cbs-mail.de</span>
           </Flex>
         </Footer>
         <CookieConsent

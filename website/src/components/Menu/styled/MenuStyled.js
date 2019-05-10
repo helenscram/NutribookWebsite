@@ -5,6 +5,7 @@ const MenuStyled = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
+  padding: 5px;
 `
 
 export default MenuStyled

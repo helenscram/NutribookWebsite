@@ -3,8 +3,8 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.5,
-  headerFontFamily: ["Montserrat", "sans-serif"],
-  bodyFontFamily: ["Montserrat", "sans-serif"],
+  headerFontFamily: ["Nunito", "sans-serif"],
+  bodyFontFamily: ["Nunito", "sans-serif"],
 })
 
 // Hot reload typography in development.

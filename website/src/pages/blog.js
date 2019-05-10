@@ -7,11 +7,14 @@ import Section from "../components/Section"
 import Figure from "../components/Figure"
 import SEO from "../components/SEO"
 import { H1, H3, P } from "../components/VerticalRhythm"
-import img01_4x1 from "../images/blog/4x1/belly.jpg"
-import img01_21x9 from "../images/blog/21x9/belly.jpg"
-import img01_16x9 from "../images/blog/16x9/belly.jpg"
-import img01_3x2 from "../images/blog/3x2/belly.jpg"
-import img01_4x3 from "../images/blog/4x3/belly.jpg"
+import img01_4x1 from "../images/blog/4x1/berries.jpg"
+import img01_21x9 from "../images/blog/21x9/berries.jpg"
+import img01_16x9 from "../images/blog/16x9/berries.jpg"
+import img01_3x2 from "../images/blog/3x2/berries.jpg"
+import img01_4x3 from "../images/blog/4x3/berries.jpg"
+import calories2_4x3 from "../images/blog/4x3/calories2.jpg"
+import mealprep_4x3 from "../images/blog/4x3/mealprep.jpg"
+import belly_4x3 from "../images/blog/4x3/belly.jpg"
 import breakpoints from "../theme/breakpoints"
 
 class BlogPage extends React.Component {
@@ -50,6 +53,31 @@ class BlogPage extends React.Component {
         <Section>
           <H1>Blog</H1>
           <p> The latest health, nutrition, and fitness information for you!</p>
+          <Figure caption="Photos from pexels.com">
+            <div class="row">
+              <smallpicture class="column">
+                <source
+                  srcSet={calories2_4x3}
+                  media={`(min-width: ${breakpoints.sm})`}
+                />
+                <img src={calories2_4x3} alt="Berries" />
+              </smallpicture>
+              <smallpicture class="column">
+                <source
+                  srcSet={mealprep_4x3}
+                  media={`(min-width: ${breakpoints.sm})`}
+                />
+                <img src={mealprep_4x3} alt="Berries" />
+              </smallpicture>
+              <smallpicture class="column">
+                <source
+                  srcSet={belly_4x3}
+                  media={`(min-width: ${breakpoints.sm})`}
+                />
+                <img src={belly_4x3} alt="Berries" />
+              </smallpicture>
+            </div>
+          </Figure>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
