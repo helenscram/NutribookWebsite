@@ -1,9 +1,9 @@
 {
-  "name": "gsua",
+  "name": "Nutribook",
   "private": true,
-  "description": "A simple starter for developing with Gatsby in class",
+  "description": "Create your recipe collection with Nutribook",
   "version": "0.8.0",
-  "author": "Dr Ulrich Anders",
+  "author": "Helen Cramer",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
@@ -63,9 +63,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/drulrichanders/gsua"
+    "url": "https://github.com/helenscram/NutribookWebsite.git"
   },
   "bugs": {
-    "url": "https://github.com/drulrichanders/gsua/issues"
+    "url": "https://github.com/helenscram/NutribookWebsite.git"
   }
 }
