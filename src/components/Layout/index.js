@@ -5,7 +5,7 @@ import CookieConsent from "react-cookie-consent"
 import "./styled/layout.css"
 import { ThemeProvider } from "styled-components"
 import { Flex } from "rebass"
-import "typeface-Nunito"
+import "typeface-nunito"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
